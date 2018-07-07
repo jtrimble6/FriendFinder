@@ -5,6 +5,8 @@
         <title>Survey Questions</title>
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery.js"></script>
     </head>
@@ -39,7 +41,7 @@
                 </select><br><br>
 
             <h2>Question 2</h2><hr>
-                <h3>Test question here.</h3>
+                <h3>You would rather read a book than watch a movie.</h3>
                 <select class="chosen-select" id="q2">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -50,7 +52,7 @@
                 </select><br><br>
 
             <h2>Question 3</h2><hr>
-                <h3>Test question here.</h3>
+                <h3>You believe that Michael Jordan is the G.O.A.T.</h3>
                 <select class="chosen-select" id="q3">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -61,7 +63,7 @@
                 </select><br><br>
 
             <h2>Question 4</h2><hr>
-                <h3>Test question here.</h3>
+                <h3>You like your foods SPICYYY.</h3>
                 <select class="chosen-select" id="q4">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -72,7 +74,7 @@
                 </select><br><br>
 
             <h2>Question 5</h2><hr>
-                <h3>Test question here.</h3>
+                <h3>You would rather live in the city than the countryside.</h3>
                 <select class="chosen-select" id="q5">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -83,7 +85,7 @@
                 </select><br><br>
 
             <h2>Question 6</h2><hr>
-                <h3>Test question here.</h3>
+                <h3>You would rather have a cat than a dog.</h3>
                 <select class="chosen-select" id="q6">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -94,7 +96,7 @@
                 </select><br><br>
 
             <h2>Question 7</h2><hr>
-                <h3>Test question here.</h3>
+                <h3>You are still a kid at heart.</h3>
                 <select class="chosen-select" id="q7">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -105,7 +107,7 @@
                 </select><br><br>
 
             <h2>Question 8</h2><hr>
-                <h3>Test question here.</h3>
+                <h3>You would rather be rich than famous.</h3>
                 <select class="chosen-select" id="q8">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -116,7 +118,7 @@
                 </select><br><br>
 
             <h2>Question 9</h2><hr>
-                <h3>Test question here.</h3>
+                <h3>You would rather dream big and fail than dream small and succeed.</h3>
                 <select class="chosen-select" id="q9">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -127,7 +129,7 @@
                 </select><br><br>
     
             <h2>Question 10</h2><hr>
-                <h3>Test question here.</h3>
+                <h3>You believe that one of the following: ghosts, aliens, or big foot.</h3>
                 <select class="chosen-select" id="q10">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -137,10 +139,50 @@
                     <option value="5">5 (Strongly Agree)</option>
                 </select><br><br>
 
-            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
+            <button type="submit" class="btn btn-primary btn-lg btn-block modalPop" id="submit" data-toggle="modal" data-target="#exampleModal" data-show="false">
+                    <!-- data-toggle="modal" data-target="#exampleModal" -->
                 Submit
             </button>
 
+            <br>
+
+            <div class="links" style="text-align: center; color: red;";>
+                    <a href="/api/friends">
+                        API Friends List |
+                    </a>
+                    <a href="https://github.com/jtrimble6/FriendFinder">
+                        GitHub Repo 
+                    </a>
+            </div>
+
+            <!-- Button trigger modal -->
+      
+        <!-- Modal -->
+        
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Your new best friend is:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-name"></div>
+                        <!-- <div class="modal-photo"></div> -->
+                        <a href="#" id="pop">
+                                <img class="modal-photo" style="width: 400px; height: 264px;">
+                        </a>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ENDING DIV -->
         </div>
 
     </body>
@@ -205,6 +247,7 @@
         var currentURL = window.location.origin;
         var scoresArray = [];
         var bestMatch;
+        var bestMatchNum;
         
         $.ajax({ url: currentURL + "/api/friends", method: "GET" })
           .then(function(friends) {
@@ -227,12 +270,6 @@
                 for (var j=0; j < scoresArray.length; j++) {
                     
                     var thisDiff = 0;
-                    console.log("Compare me: ");
-                    console.log(newFriend);
-                    console.log("---------------------");
-                    console.log(scoresArray[j]);
-                    console.log(newFriend.scores);
-                    console.log("---------------------");
 
                     for (var z=0; z < 10; z++) {
                         console.log(Math.abs(newFriend.scores[z] - scoresArray[j][z]));
@@ -240,26 +277,21 @@
                         thisDiff = thisDiff + diff;
                     };
                     
-                    
-                    console.log("---------------------");
-                    console.log("Total Difference: " + thisDiff);
                     diffArray.push(thisDiff);
-                    console.log(diffArray);
-                    
-                    console.log(Math.min(...diffArray));
-                    console.log(diffArray.indexOf((Math.min(...diffArray))));
-                    
-                    bestMatch = diffArray.indexOf((Math.min(...diffArray)));
-                    console.log("Congrats, your best match is " + bestMatch);
-            
-                    
+    
                 }
+
+                bestMatchNum = diffArray.indexOf((Math.min(...diffArray)));
+                bestMatchName = friends[bestMatchNum].name;
+                bestMatchPhoto = friends[bestMatchNum].photo;
+                console.log("Congrats, your best match is " + bestMatchName);
+
                 }; 
 
+                $('.modal-name').html("<h1>" + bestMatchName + "<h1>");
+                $('.modal-photo').attr('src', bestMatchPhoto);
+
         });
-
-        
-
 
     }
 
